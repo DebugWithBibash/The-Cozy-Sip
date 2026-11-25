@@ -1,0 +1,273 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Agrave+Pro:wght@100..700&display=swap');
+:root{
+    --goldcolor:#fff3df;
+}
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+    background-color: white;
+    width: 100%;
+  font-family: "Agrave Pro", cursive;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+/* Design for a bozx that contains all the header contents like h1 and navbar */
+header{
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: #3a2b23;
+    color:white;
+    z-index: 10;
+    
+}
+.wrapper{
+    width: 95%;
+    margin: 0 auto;
+}
+.heading{
+    display: flex;
+    justify-content: space-between;
+}
+/* design for footer */
+footer{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    background-color: #3a2b23;
+    color: white;
+    height: 200px;
+}
+
+/* Type selector ul to make links horizontally align and in the center of the section box */
+header nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-size: 1.5rem;
+    list-style: none;
+}
+/* Removes underline and blue color to the links in the navbar */
+nav ul li a{
+    color: white;
+    text-decoration: none;
+}
+
+/* This is for smooth transition when hovering */
+nav ul li{
+    transition: transform 0.2s ease-in;
+
+}
+
+/* Moves links litte upwar direction using -4px */
+nav ul li:hover{
+    transform: translateY(-4px);
+}
+
+/* This is the order now button design */
+#order-btn{
+    background-color: #A44522;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 15px;
+}
+
+/* This changes the color of order now button when hovering */
+#order-btn:hover{
+    background-color: #7b3116;
+}
+
+/* Linear background on main section */
+main{
+    background: linear-gradient(to bottom, #eddccb, #fff8ed);
+    box-sizing: border-box;
+}
+
+/* This is the first thing that user see on the display, we used backgroudn image im this with no repeat because if the screen grows bigger, the same image starts apprearing in a loop */
+.hero{
+    color: var(--goldcolor);
+    display: flex;
+    justify-content: right;
+    min-height: 65vh;
+    padding: 40px;
+    background-image: url(../images/backgroundcoffee.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.storeTitle{
+   margin: 10px 0 0 0;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    width: 60%;
+    padding: 5px;
+
+}
+.storeTitle .links{
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    margin-top: 200px;
+}
+.storeTitle a{
+    text-decoration: none;
+    font-size: larger;
+    background-color:  #724519 ;
+    border-radius: 8px;
+    padding: 10px 20px;
+    color: white;
+}
+
+.storeTitle a:hover{
+    background-color: #563512;
+}
+.storeTitle h1{
+    margin: 0 0 18px;
+    font-size: 4rem;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+.small p{
+    line-height: 1;
+}
+/* This is the wrapper for all the order options */
+.order{
+    border: 2px solid red;
+}
+/* We are centering the how to order sentence */
+.orderfont{
+    font-size: 1.5rem;
+    width: 600px;
+    margin: 15px auto;
+    border: 1px solid black;
+    text-align: center;
+}
+/* Centering the ways and using flex to get them in same row */
+.order-ways{
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* this is a wrapper for each pictures which acts a parent and we can control children inside this class */
+.photo{
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 30%;
+    background-color: #fcf0df;
+}
+
+/* Fixing image size inside the photo class */
+.photo img{
+    height: 200px;
+    width: 100%;
+}
+
+.photo p{
+    color: rgb(97, 84, 10);
+}
+
+footer{
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #3a2b23;
+    color: white;
+}
+
+
+/* ---------Contact.html styles by Bibash ------------------------ */
+
+
+
+/* CSS By Gustavo For Menu */
+
+.menu{
+    text-align: center;
+    margin-bottom:150px;
+}
+
+.item-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 14px;
+    margin-bottom: 10px;
+    mask-image: linear-gradient(black,rgba(0, 0, 0, 0.87), transparent);
+}  
+
+.category-section{
+    margin-bottom: 60px;
+}
+
+.category-title{
+    text-decoration: underline;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.item-grid{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.item-card{
+    border: 2px rgba(58, 43, 35, 1) solid;
+    flex: 1 1 250px;
+    border-radius: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    background-color: black;
+    color:white;
+    }
+
+.item-name{
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: large;
+    font-weight: 600;
+    
+}
+
+.item-card p{
+   margin-bottom: 10px;
+   width:80%;
+   text-align: center;
+}
+
+.item-price{
+    background-color: #a44522;
+    color: white;
+    border-radius: 8px;
+    padding: 4px 8px;
+    align-self: flex-end;
+    margin-top: auto;
+    border: 2px black solid;
+    position: absolute;
+    top:-8px;
+    right:-8px;
+    font-size: larger;
+    font-weight: 600;
+}
+
+
+.store-hours{
+    text-align: right;
+    padding: 10px 80px;
+}
+
