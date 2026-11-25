@@ -1,59 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
     <header>
         <div class="wrapper heading">
-       
+
             <h1>The Cozy Sip</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="cafe-menu.html">Menu</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="order.html" id="order-btn">Order Now</a></li>
-            </ul>       
-        </nav>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="cafe-menu.html">Menu</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="order.html" id="order-btn">Order Now</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
     <main>
         <section class="hero">
             <div class="storeTitle">
-                <h1>THe Cozy Sip</h1>
-                <div class="small"><p>Discover coffee and other cousine inspired by Nepal, Morroco and Mexico.</p>
-                <p>Every sip is worth it!</p></div> 
+                <h1><em>The Cozy Sip</em></h1>
+                <div class="small">
+                    <p>Discover coffee and other cousine inspired by Nepal, Morroco and Mexico.</p>
+                    <p>Every sip is worth it!</p>
+                </div>
                 <div class="links">
-                    <a href="#"> Explore Menu</a>     
-                    <a href="#">Our Story</a>     
+                    <a href="#"> Explore Menu</a>
+                    <a href="#">Our Story</a>
                 </div>
             </div>
         </section>
 
-        <section class="popular wrapper">
+        <section class="famous wrapper" id="menu">
+            <div class="orderfont">
+                <h2><u>Our Famous Items</u></h2>
+            </div>
 
+            <div class="card">
+                <img src="images/nepal-food.jpg" alt="A latte with leaf art" width="300" height="200">
+                <h3>Sel Roti</h3>
+                <p>Traditional Nepali sweet rice bread, golden and crispy on the outside with a soft, chewy center.</p>
+                <p class="price">$3.99</p>
+            </div>
+            <div class="card">
+                <img src="images/moroccan-coffee.jpg" alt="A glazed cardamom bun" width="300" height="200">
+                <h3>Moroccan Spiced Coffee</h3>
+                <p>Rich coffee infused with cinnamon, cardamom, ginger, and nutmeg by Moroccan spice traditions.</p>
+                <p class="price">$4.99</p>
+            </div>
+            <div class="card">
+                <img src="images/mexican-sandwhich.jpg" alt="Hot chocolate topped with marshmallows" width="300"
+                    height="200">
+                <h3>Mexican Sunrise Torta</h3>
+                <p>Savory Mexican chorizo, fluffy scrambled eggs, melted cheese, and creamy avocado layered inside.</p>
+                <p class="price">$6.99</p>
+            </div>
         </section>
 
         <section class="order wrapper">
             <div class="orderfont">
-                <h2>How to Enjoy our Cozy Sip?</h2>
+                <h2><u>How to Enjoy our Cozy Sip?</u></h2>
             </div>
             <div class="order-ways">
                 <div class="photo">
-                    <img src="background.png" alt="Photo of order online">
+                    <div class="order-img">
+
+                        <img src="images/mexican-sandwhich.jpg" alt="Photo of order online">
+                    </div>
                     <figcaption>Order Online</figcaption>
                 </div>
                 <div class="photo">
-                    <img src="background.png" alt="Photo of order by calling">
+                    <div class="order-img">
+                        <img src="images/mexican-coffee.jpg" alt="Photo of order by calling">
+                    </div>
                     <figcaption>Call Us</figcaption>
                 </div>
                 <div class="photo">
-                    <img src="background.png" alt="Photo of Dine in tables">
+                    <div class="order-img">
+                        <img src="images/moroccan-coffee.jpg" alt="Photo of Dine in tables">
+                    </div>
                     <figcaption>Dine-In</figcaption>
                 </div>
             </div>
@@ -65,4 +98,5 @@
         <p>&copy All Rights Reserved</p>
     </footer>
 </body>
+
 </html>

@@ -2,6 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Agrave+Pro:wght@100..700&display=swap');
 :root{
     --goldcolor:#fff3df;
+    --darkbrown : #A44522;
+    --hovercolor:#7b3116;
 }
 body{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -69,7 +71,7 @@ nav ul li:hover{
 
 /* This is the order now button design */
 #order-btn{
-    background-color: #A44522;
+    background-color: var(--darkbrown);
     color: white;
     padding: 5px 15px;
     border-radius: 15px;
@@ -77,7 +79,7 @@ nav ul li:hover{
 
 /* This changes the color of order now button when hovering */
 #order-btn:hover{
-    background-color: #7b3116;
+    background-color: var(--hovercolor);
 }
 
 /* Linear background on main section */
@@ -113,69 +115,127 @@ main{
     gap: 20px;
     justify-content: flex-end;
     flex-wrap: wrap;
-    margin-top: 200px;
-}
-.storeTitle a{
-    text-decoration: none;
-    font-size: larger;
-    background-color:  #724519 ;
-    border-radius: 8px;
-    padding: 10px 20px;
-    color: white;
+    margin-top: 35px;
 }
 
-.storeTitle a:hover{
-    background-color: #563512;
+/* Style for both explore menu and our story */
+.links a{
+    text-decoration: none;
+    font-size: larger;
+    background-color:  var(--darkbrown);
+    border-radius: 8px;
+    padding: 10px 30px;
+    color: white;
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Targeting only the Our story */
+.links a+a{
+    background-color:transparent;
+    border: 1px solid white;
+}
+
+/* This is only for the Explore Menu */
+.links a:first-child:hover{
+    background-color: var(--hovercolor);
+}
+/* This is for both explore menu and story for hovering effect */
+.links a:hover{
+    box-shadow: 0 5px 13px rgba(0,0,0,0.5);
+    transform: scale(1.05);
 }
 .storeTitle h1{
     margin: 0 0 18px;
-    font-size: 4rem;
+    font-size: 6rem;
     font-weight: bold;
+    letter-spacing: 2px;
     box-sizing: border-box;
 }
 .small p{
-    line-height: 1;
+    line-height: 1.5;
+    font-size: 1.3rem;
+    margin: 8px 0;
+}
+
+.small p:last-child{
+    font-style: italic;
+}
+
+
+ 
+/* Styles the whole famous food section */
+.card{
+        display: inline-block;
+        width: 30%;
+        vertical-align: top;
+        margin-right: 3%;
+        background-color: white;
+        position: relative;
+        overflow: hidden;
+        border-radius: 14px;
+        
+}
+
+h2{
+    margin-bottom: 20px;
+    font-size: 2.5em;
+}
+
+.card h3, p{
+        margin:20px 10px;
+
+}
+
+.card img{   
+        width: 100%;
+        height: 100%;
+        
+}
+.price{
+    font-size: large;
+        color:#6b3e26;
 }
 /* This is the wrapper for all the order options */
 .order{
     border: 2px solid red;
 }
+
+
 /* We are centering the how to order sentence */
 .orderfont{
-    font-size: 1.5rem;
-    width: 600px;
-    margin: 15px auto;
+    margin:0;
     border: 1px solid black;
     text-align: center;
 }
 /* Centering the ways and using flex to get them in same row */
 .order-ways{
     display: flex;
-    gap: 30px;
     justify-content: center;
     align-items: center;
+    gap: 30px;
 }
 
 /* this is a wrapper for each pictures which acts a parent and we can control children inside this class */
 .photo{
+    width: 100%;
     border: 1px solid red;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px;
-    width: 30%;
     background-color: #fcf0df;
+    height: 500px;
 }
-
-/* Fixing image size inside the photo class */
-.photo img{
-    height: 200px;
+.order-img{
+    border: 1px solid black;
     width: 100%;
+    height: 80%;
 }
 
-.photo p{
-    color: rgb(97, 84, 10);
+.order-img img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 
 footer{
