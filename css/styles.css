@@ -5,10 +5,12 @@
     --darkbrown : #A44522;
     --hovercolor:#7b3116;
 }
+
+/* This is the style for body which will have oour main font and background color */
 body{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     margin: 0;
-    background-color: white;
+   background: linear-gradient(to bottom, #eddccb, #fff8ed);
     width: 100%;
   font-family: "Agrave Pro", cursive;
   font-optical-sizing: auto;
@@ -25,6 +27,8 @@ header{
     z-index: 10;
     
 }
+
+/* This is the wrapper class whcih we will be using in all the elements so it will make their width 95% of the screen */
 .wrapper{
     width: 95%;
     margin: 0 auto;
@@ -32,15 +36,6 @@ header{
 .heading{
     display: flex;
     justify-content: space-between;
-}
-/* design for footer */
-footer{
-    width: 100%;
-    box-sizing: border-box;
-    padding: 10px;
-    background-color: #3a2b23;
-    color: white;
-    height: 200px;
 }
 
 /* Type selector ul to make links horizontally align and in the center of the section box */
@@ -82,9 +77,8 @@ nav ul li:hover{
     background-color: var(--hovercolor);
 }
 
-/* Linear background on main section */
+/* main section */
 main{
-    background: linear-gradient(to bottom, #eddccb, #fff8ed);
     box-sizing: border-box;
 }
 
@@ -93,7 +87,7 @@ main{
     color: var(--goldcolor);
     display: flex;
     justify-content: right;
-    min-height: 65vh;
+    min-height: 75vh;
     padding: 40px;
     background-image: url(../images/backgroundcoffee.jpg);
     background-repeat: no-repeat;
@@ -108,7 +102,6 @@ main{
     justify-content: right;
     width: 60%;
     padding: 5px;
-
 }
 .storeTitle .links{
     display: flex;
@@ -168,17 +161,20 @@ main{
         display: inline-block;
         width: 30%;
         vertical-align: top;
-        margin-right: 3%;
         background-color: white;
         position: relative;
         overflow: hidden;
         border-radius: 14px;
-        
+        margin-top: 20px;
+}
+
+.card + .card{
+    margin-left: 4.5%;
 }
 
 h2{
-    margin-bottom: 20px;
     font-size: 2.5em;
+    text-decoration: underline;
 }
 
 .card h3, p{
@@ -193,19 +189,18 @@ h2{
 }
 .price{
     font-size: large;
-        color:#6b3e26;
+    color:#6b3e26;
 }
-/* This is the wrapper for all the order options */
-.order{
-    border: 2px solid red;
-}
-
 
 /* We are centering the how to order sentence */
 .orderfont{
     margin:0;
     border: 1px solid black;
     text-align: center;
+}
+
+.orderfont h2{
+    margin-bottom: 0px;
 }
 /* Centering the ways and using flex to get them in same row */
 .order-ways{
@@ -218,31 +213,124 @@ h2{
 /* this is a wrapper for each pictures which acts a parent and we can control children inside this class */
 .photo{
     width: 100%;
-    border: 1px solid red;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #fcf0df;
     height: 500px;
 }
+.photo figcaption{
+    margin-top: 10px;
+    font-size: 1.3rem;
+}
+
 .order-img{
-    border: 1px solid black;
     width: 100%;
     height: 80%;
 }
 
 .order-img img{
+    border-radius: 14px;
     height: 100%;
     width: 100%;
     object-fit: cover;
 }
+/* This acts as a wrapper for the review section */
+.review-wrapper{
+    border: 1px solid red;
+    text-align: center;
+}
 
+.reviews{
+    font-family: 'Times New Roman', Times, serif;
+    display: grid;
+    grid-template-columns: repeat(5, 450px);
+    gap: 20px;
+    overflow-x: auto;
+    
+}
+
+.reviews > div{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid brown;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    padding: 5px 20px 10px 20px;
+    box-sizing: border-box;
+    
+}
+
+p[class$="review"]{
+    font-size: 1.2rem;
+    font-style: italic;
+    margin: 0;
+
+}
+
+p[class=person]{
+    font-weight: bold;
+    font-size: 1.3rem;
+    font-style: normal;
+    margin: 10px 0;
+}
+
+.review p:first-child::before{
+    content: "\2605\2605\2605\2605\2605";
+    font-size: 30px;
+    display: block;
+    color: gold;
+    margin: 0 0 10px 0;
+}
 footer{
+    display: grid;
+    grid-template-rows: auto auto;
+    font-family: 'Times New Roman', Times, serif;
     width: 100%;
+    height: auto;
     box-sizing: border-box;
     background-color: #3a2b23;
+    color: var(--goldcolor);
+
+}
+
+footer > span{
+    margin-bottom: 20px;
+    text-align: end;
+    margin-right: 50px;
+}
+
+#footer-links{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    padding: 40px 90px;
+    justify-content: center;
+    
+}
+
+#footer-links> div{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#footer-links address{
+    line-height: 1.7;
+}
+#footer-links a{
+    text-decoration: none;
     color: white;
+    font-size: 1.1rem;
+}
+#footer-links a:hover{
+    text-decoration: underline rgba(212, 168, 110, 0.7);
+}
+#footer-links h3{
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-decoration: underline dashed;
+    
 }
 
 
