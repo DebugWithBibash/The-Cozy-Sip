@@ -428,6 +428,16 @@ footer > span{
     display: grid;
     grid-column: 1 / 3;
     grid-template-columns: repeat(3, 1fr);
+    column-gap: 10px;
+}
+
+.foodBox label[for$="_quantity"]{
+    margin: 20px 0 0 0;
+    display: inline-block;
+}
+
+.foodBox input[type="number"]{
+    font-size: 1.06rem;
 }
 
 .foodBox h2{
