@@ -23,8 +23,14 @@ header{
     background-color: #3a2b23;
     color:white;
     z-index: 10;
-    
 }
+
+.cozy-logo {
+    width: 250px;
+    max-width: 100%;
+    height: 150px;
+}
+
 .wrapper{
     width: 95%;
     margin: 0 auto;
@@ -40,7 +46,7 @@ footer{
     padding: 10px;
     background-color: #3a2b23;
     color: white;
-    height: 200px;
+    min-height: 200px;
 }
 
 /* Type selector ul to make links horizontally align and in the center of the section box */
@@ -48,9 +54,11 @@ header nav ul{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
-    font-size: 1.5rem;
+    gap: 40px;
+    font-size: 2.0rem;
     list-style: none;
+    margin-top: 60px;
+    font-weight: bolder;
 }
 /* Removes underline and blue color to the links in the navbar */
 nav ul li a{
@@ -83,9 +91,12 @@ nav ul li:hover{
 }
 
 /* Linear background on main section */
+/* edit gustavo hernandez beans watermark*/ 
 main{
-    background: linear-gradient(to bottom, #eddccb, #fff8ed);
-    box-sizing: border-box;
+    background-color: #ffd29a;
+    background-image: url("../images/watermark-beans.png");
+    background-size: 900px auto;
+    background-repeat: repeat;
 }
 
 /* This is the first thing that user see on the display, we used backgroudn image im this with no repeat because if the screen grows bigger, the same image starts apprearing in a loop */
@@ -95,7 +106,7 @@ main{
     justify-content: right;
     min-height: 65vh;
     padding: 40px;
-    background-image: url(../images/backgroundcoffee.jpg);
+    background-image: url(../images/cozy-cafe2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -252,9 +263,31 @@ footer{
 
 /* CSS By Gustavo For Menu */
 
-.menu{
+
+
+.hero-menu{
+    width: 100%;
+    height: 130px;
+    background-size: cover;
+    background-position: center;
+    background-image:
+    linear-gradient(to top, #ffd29a, transparent 20%),
+    url("../images/cozy-cafe.jpg");
+    padding: 150px 0 350px;
+    color:#FFF8ED;
     text-align: center;
-    margin-bottom:150px;
+    font-weight: bold;
+    font-family: "Agrave Pro", cursive;
+    text-shadow: 2px 4px 6px rgba(43, 33, 28, 0.7);
+}
+
+.hero-menu p {
+    font-size: 40px;
+    font-weight: bolder;
+}
+
+.hero-menu h2 {
+    text-transform: capitalize;
 }
 
 .item-img img{
@@ -267,21 +300,21 @@ footer{
 }  
 
 .category-section{
-    margin-bottom: 60px;
+    margin-top: 20px;
 }
 
 .category-title{
-    text-decoration: underline;
     margin-bottom: 40px;
     text-align: center;
+    color: #2B211C;
 }
 
 .item-grid{
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 50px;
     flex-wrap: wrap;
-    padding: 20px;
+    padding: 40px;
 }
 
 .item-card{
@@ -293,25 +326,33 @@ footer{
     align-items: center;
     position: relative;
     background-color: black;
-    color:white;
-    }
+    color:#FFF8ED;
+}
 
 .item-name{
     text-align: center;
     margin-bottom: 30px;
-    font-size: large;
+    font-size: larger;
     font-weight: 600;
     
 }
 
 .item-card p{
-   margin-bottom: 10px;
    width:80%;
    text-align: center;
+   margin-top: auto;
 }
 
+.bean-divider {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+
 .item-price{
-    background-color: #a44522;
+    background-color: #C68B59;
     color: white;
     border-radius: 8px;
     padding: 4px 8px;
@@ -330,4 +371,3 @@ footer{
     text-align: right;
     padding: 10px 80px;
 }
-
