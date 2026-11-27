@@ -1,45 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link rel="stylesheet" href="css/styleMenu.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
     <header>
-    <div class="header">
-        <h1>The Cozy Sip</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="cafe-menu.html">Menu</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="order.html" id="order-btn">Order Now</a></li>
-            </ul>       
-        </nav>
-    </div>
+        <div class="wrapper heading">
+
+            <div>
+                <img src="images/Cozy Sip Café Mountain Logo.png" alt="Logo of The Cozy Sip" height="70" width="100">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="cafe-menu.html">Menu</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="order.html" id="order-btn">Order Now</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
-       <section class="orderForm">
-        <form action="" method="post">
-            <label for="Name">Name</label>
-            <input type="text" id="Name" placeholder="Type your name">
+        <section class="orderForm wrapper">
+            <h1>Pre-Order Form</h1>
+            <form action="" method="post">
+                <div class="customerinformation">
+                    <h2>Your Information</h2>
+                    <div class="nameBox">
+                        <div class="firstname">
+                            <label for="fname">First Name</label> <br>
+                            <input type="text" name="fname" id="fname" placeholder="Type your first name" required>
+                        </div>
+                        
+                        <div class="lastname">
+                            <label for="lname">Last Name</label> <br>
+                        <input type="text" name="lname" id="lname" placeholder="Type your last name" required>
+                        </div>
+                        
+                    </div>
 
-            <label for="email">Email</label>
-            <input type="email" id="email" placeholder="Type your email address example:- username@gmail.com">
+                    <div class="emailBox">
+                        <label for="email">Email</label> <br>
+                        <input type="email" id="email" placeholder="Example:- username@gmail.com" name="email" required>
 
-            <label for="phn">Phone Number</label>
-            <input type="number" id="phn" placeholder="Type your phone number">
+                    </div>
 
-            
-        </form>
-       </section>
+                    <div class="phoneBox">
+                        <label for="phone">Contact no</label> <br>
+                        <input type="tel" id="phone" placeholder="Example:- username@gmail.com" name="phone" required>
+                    </div>
+
+                </div>
+                <div class="foodBox">
+                    <h2 class="Order-h2">Your Order</h2>
+                    <div class="sandwich-container">
+                        <label for="sandwich">Sandwich</label> <br>
+                        <select name="sandwich" id="sandwich" name="sandwich">
+                            <option value="">Choose your sandwich</option>
+                            <option value="HSS">Himalayan Sunrise Sandwich</option>
+                            <option value="MMS">Marrakech Morning Sandwich</option>
+                            <option value="MST">Mexican Sunrise Torta</option>
+                            <option value="MHBS">Maple House Breakfast Sandwich</option>
+                        </select>
+                    </div>
+
+                    <div class="coffee-container">
+                        <label for="coffee">Coffee</label> <br>
+                        <select name="coffee" id="coffee" name="coffee">
+                            <option value="">Choose your coffee</option>
+                            <option value="HMC">Himalayan Masala Coffee</option>
+                            <option value="MSC">Moroccan Spiced Coffee</option>
+                            <option value="CO">Caf&eacute; de Olla</option>
+                        </select>
+                    </div>
+
+                    <div class="breadBox">
+                        <label for="bread">Bread</label> <br>
+                        <select name="bread" id="bread" name="bread">
+                            <option value="">Choose your bread</option>
+                            <option value="SR">Sel Roti</option>
+                            <option value="HBM">Honey Butter Msemen</option>
+                            <option value="VC">Vanilla Concha</option>
+                            <option value="MPSB">Maple Pecan Sticky Bun</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="pickupBox">
+                    <h2>Pickup Details</h2>
+                    <div class="date">
+                        <label for="date">Choose Your Pickup Date</label> <br>
+                        <input type="date" id="date" name="pickup_date" required>
+                    </div>
+                    <div class="time">
+                        <label for="time">Choose Your Pickup Time</label> <br>
+                        <input type="time" id="time" name="pickup_time" required>
+                    </div>
+
+                    <div class="sp-instruction">
+                        <label for="instructions">Special Instructions(Optional)</label> <br>
+                        <textarea name="instructions" id="instructions"
+                            placeholder="Example:- utensils included, no sweet in chai.." rows="3"
+                            maxlength="100"></textarea>
+                    </div>
+                </div>
+
+                <div class="newsbox">
+                    <input type="checkbox" id="news" value="yes" name="news">
+                    <label for="news">Automatically sign me to receive the rewards and discounts from The Cozy
+                        Sip</label>
+                </div>
+
+                <div class="buttonBox">
+                    <button type="submit">Place Order</button>
+                    <button type="reset">Clear Form</button>
+                </div>
+
+            </form>
+        </section>
     </main>
-
     <footer>
-        <p>&copy All Rights Reserved</p>
+        <div id="footer-links">
+            <div>
+                <h3>Links</h3>
+                <a href="index.html">Home</a>
+                <a href="order.html">Order Your Food</a>
+                <a href="aboutus.html">Know About our Store</a>
+                <a href="cafe-menu.html">Our Menu</a>
+                <a href="#all-review">Reviews</a>
+            </div>
+
+            <div class="our-location">
+                <h3>Our location</h3>
+                <address>
+                    3321 Cedar Bay Street, <br>
+                    Green Bay, WI 54216 <br>
+                    Monday - Saturday
+                </address>
+            </div>
+
+            <div class="touch">
+                <h3>Have Any Questions?</h3>
+                <a href="mailto:thecozysip@cafe.com">thecozysip@cafe.com</a>
+                <a href="tel:+9108002348">+9108002348</a>
+            </div>
+            <div class="logo">
+                <img src="images/Cozy Sip Café Mountain Logo.png" alt="Logo of The Cozy Sip" height="200" width="300">
+            </div>
+        </div>
+
+        <span>&copy 2026 Web Programming Group. All Rights Reserved</span>
     </footer>
+
 </body>
+
 </html>

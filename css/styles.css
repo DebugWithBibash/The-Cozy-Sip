@@ -36,6 +36,8 @@ header{
 .heading{
     display: flex;
     justify-content: space-between;
+    align-items: center;
+   
 }
 
 /* Type selector ul to make links horizontally align and in the center of the section box */
@@ -94,6 +96,7 @@ main{
     background-size: cover;
 }
 
+/* This moves the container that contains the name of the screen  to the right side of the screen */
 .storeTitle{
    margin: 10px 0 0 0;
     text-align: right;
@@ -103,11 +106,12 @@ main{
     width: 60%;
     padding: 5px;
 }
+
+/* THis provides proper space and puts the links to the right below the the name of the store*/
 .storeTitle .links{
     display: flex;
     gap: 20px;
     justify-content: flex-end;
-    flex-wrap: wrap;
     margin-top: 35px;
 }
 
@@ -137,6 +141,8 @@ main{
     box-shadow: 0 5px 13px rgba(0,0,0,0.5);
     transform: scale(1.05);
 }
+
+/* THis styles the name of the store */
 .storeTitle h1{
     margin: 0 0 18px;
     font-size: 6rem;
@@ -144,18 +150,19 @@ main{
     letter-spacing: 2px;
     box-sizing: border-box;
 }
+
+/* Styling the senteneces below the name of the store */
 .small p{
     line-height: 1.5;
     font-size: 1.3rem;
     margin: 8px 0;
 }
 
+/* This syles the third paragraph and make it italic */
 .small p:last-child{
     font-style: italic;
 }
 
-
- 
 /* Styles the whole famous food section */
 .card{
         display: inline-block;
@@ -172,7 +179,7 @@ main{
     margin-left: 4.5%;
 }
 
-h2{
+main h2{
     font-size: 2.5em;
     text-decoration: underline;
 }
@@ -195,7 +202,7 @@ h2{
 /* We are centering the how to order sentence */
 .orderfont{
     margin:0;
-    border: 1px solid black;
+    
     text-align: center;
 }
 
@@ -207,7 +214,8 @@ h2{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 30px;
+    gap: 50px;
+    margin-top: 20px;
 }
 
 /* this is a wrapper for each pictures which acts a parent and we can control children inside this class */
@@ -217,30 +225,47 @@ h2{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 500px;
+    
+
 }
+
+.order-img :hover{
+    box-shadow: 0 7px 10px rgba(0,0,0,0.5);
+}
+
+/* Styling the figcaption which is below the picture on how to enjoy the cozy sip */
 .photo figcaption{
     margin-top: 10px;
     font-size: 1.3rem;
+    text-align: center;
 }
 
+/* Container for the images */
 .order-img{
+    transition: transform 0.3s ease-out ;
     width: 100%;
     height: 80%;
 }
 
+/* Styling images that is inside the order-img class */
 .order-img img{
     border-radius: 14px;
     height: 100%;
     width: 100%;
     object-fit: cover;
 }
+
+.photo a{
+    display: block;
+    text-decoration: none;
+    color: black;
+}
 /* This acts as a wrapper for the review section */
 .review-wrapper{
-    border: 1px solid red;
     text-align: center;
 }
 
+/* This is the main container that sets the display to grid for the reviews */
 .reviews{
     font-family: 'Times New Roman', Times, serif;
     display: grid;
@@ -250,10 +275,10 @@ h2{
     
 }
 
+/* This is to style the each of the container of the review */
 .reviews > div{
     display: flex;
     flex-direction: column;
-    border: 2px solid brown;
     border-radius: 15px;
     margin-bottom: 20px;
     padding: 5px 20px 10px 20px;
@@ -261,20 +286,21 @@ h2{
     
 }
 
+/* This targets the review written by the customer*/
 p[class$="review"]{
     font-size: 1.2rem;
     font-style: italic;
     margin: 0;
-
 }
 
+/*This targets and style the name of the person writing the review.*/
 p[class=person]{
     font-weight: bold;
     font-size: 1.3rem;
     font-style: normal;
     margin: 10px 0;
 }
-
+/* This makes the stars for the review just before the the name of the reviewer */
 .review p:first-child::before{
     content: "\2605\2605\2605\2605\2605";
     font-size: 30px;
@@ -282,6 +308,8 @@ p[class=person]{
     color: gold;
     margin: 0 0 10px 0;
 }
+
+/* This controls the all the two section links and span inside the footer as grid*/
 footer{
     display: grid;
     grid-template-rows: auto auto;
@@ -291,15 +319,15 @@ footer{
     box-sizing: border-box;
     background-color: #3a2b23;
     color: var(--goldcolor);
-
 }
 
+/* This moves the allright reserved to the right of the footer */
 footer > span{
     margin-bottom: 20px;
     text-align: end;
     margin-right: 50px;
 }
-
+/* This only controls the links and the logo as a grid by making four columns */
 #footer-links{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -309,23 +337,29 @@ footer > span{
     
 }
 
+/* This sets the gap for all the links inside footer-links id */
 #footer-links> div{
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
+/* Increased space between each line makes the address look more better */
 #footer-links address{
     line-height: 1.7;
 }
+/* This removes underline and sets font color to white for the a tags */
 #footer-links a{
     text-decoration: none;
     color: white;
     font-size: 1.1rem;
 }
+/* Sets underline to the links while hovering */
 #footer-links a:hover{
     text-decoration: underline rgba(212, 168, 110, 0.7);
 }
+
+/* Makes the h3 a little bigger and puts the dashed underline */
 #footer-links h3{
     font-size: 1.4rem;
     font-weight: bold;
@@ -334,9 +368,126 @@ footer > span{
 }
 
 
-/* ---------Contact.html styles by Bibash ------------------------ */
+/* ---------order.html styles by Bibash ------------------------ */
 
+.orderForm{
+    box-sizing: border-box;
+    margin: 20px auto;
+    max-width: 1000px;
+    border: 2px solid brown;
+    border-radius: 10px;
+    display: grid;
+    padding: 10px 50px;
+    box-shadow:inset 2px 5px 5px;
+    
+}
+.orderForm form{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
+}
+.orderForm >h1{
+    margin: 0;
+    font-size: 3rem;
+    text-decoration: underline;
+    text-align: center;
+}
 
+.orderForm h2{
+    background-color: #f0c093;
+    font-size: 2rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    padding: 5px 10px;
+    
+    box-shadow:inset 0 1px 3px;
+
+}
+.orderForm h2{
+    grid-column: 1 / 3;
+    margin: 0 0 10px 0;
+}
+/* This controls the grid of all the order information */
+.customerinformation{
+    display: grid;
+    grid-column: 1 / 3 ;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+/* Controls firstname, last name */
+.nameBox{
+    display: grid;
+    grid-column: 1/ 3;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.foodBox{
+    display: grid;
+    grid-column: 1 / 3;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.foodBox h2{
+    grid-column: 1 / 4;
+}
+
+.pickupBox{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column: 1 / 3;
+    gap: 20px;
+}
+.sp-instruction{
+    grid-column: 1 / 3;
+    display: flex;
+    flex-direction: column;
+}
+
+.newsbox{
+    grid-column: 1/4;
+    
+}
+
+.buttonBox{
+    display: flex;
+    gap: 20px;
+}
+
+.buttonBox > button{
+    padding: 10px 20px;
+    border-radius:10px;
+    cursor: pointer;
+    background-color: var(--darkbrown);
+    transition: transform 0.3s ease-in;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.buttonBox > button:hover{
+    transform: scale(1.1);
+}
+
+.orderForm input, #sandwich, #coffee, #bread{
+    width: 80%;
+    box-sizing: border-box;
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+.orderForm label{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.3rem;
+}
+
+.newsbox input{
+   width: auto;
+   margin: 0;
+}
 
 /* CSS By Gustavo For Menu */
 
